@@ -1,36 +1,37 @@
 {
-    "stencil component": {
+    "Stencil Component": {
         "prefix": "stc",
         "body": [
             "import { Component } from '@stencil/core';",
             "",
             "",
             "@Component({",
-            "\ttag: 'my-hobbies',",
-            "\tstyleUrl: 'my-hobbies.scss'",
+            "\ttag: 'my-component',",
+            "\tstyleUrl: 'my-component.scss'",
             "})",
-            "export class MyHobbies {",
+            "export class MyComponent {",
+            "",
             "\trender() {",
             "\t\treturn (",
-            "\t\t\t<p>My hobbies</p>",
+            "\t\t\t<p>My name is Stencil</p>",
             "\t\t);",
             "\t}",
             "}"
         ],
-        "description": "For Loop"
+        "description": "Generate a new Stencil component"
     },
-    "stencil state": {
+    "Stencil State": {
         "prefix": "sts",
         "body": [
             "@State() newState: any;"
         ],
-        "description": "Add a new state"
+        "description": "Add a new State"
     },
-    "stencil prop": {
+    "Stencil Prop": {
         "prefix": "stp",
         "body": [
             "@Prop() newProp: any;"
         ],
-        "description": "Add a new prop"
+        "description": "Add a new Prop"
     }
 }

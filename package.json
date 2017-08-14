@@ -2,7 +2,7 @@
     "name": "stencil-snippets",
     "displayName": "stencil-snippets",
     "description": "Stencils snippets for VS Code",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "publisher": "fdom",
     "engines": {
         "vscode": "^1.15.0"

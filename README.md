@@ -26,3 +26,7 @@ Type part of a snippet, press enter, and the snippet unfolds.
 ### 1.0.0
 
 Initial release
+
+### 1.0.1
+
+Update snippets info
