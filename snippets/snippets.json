@@ -1,0 +1,36 @@
+{
+    "stencil component": {
+        "prefix": "stc",
+        "body": [
+            "import { Component } from '@stencil/core';",
+            "",
+            "",
+            "@Component({",
+            "\ttag: 'my-hobbies',",
+            "\tstyleUrl: 'my-hobbies.scss'",
+            "})",
+            "export class MyHobbies {",
+            "\trender() {",
+            "\t\treturn (",
+            "\t\t\t<p>My hobbies</p>",
+            "\t\t);",
+            "\t}",
+            "}"
+        ],
+        "description": "For Loop"
+    },
+    "stencil state": {
+        "prefix": "sts",
+        "body": [
+            "@State() newState: any;"
+        ],
+        "description": "Add a new state"
+    },
+    "stencil prop": {
+        "prefix": "stp",
+        "body": [
+            "@Prop() newProp: any;"
+        ],
+        "description": "Add a new prop"
+    }
+}
