@@ -17,9 +17,14 @@ Type part of a snippet, press enter, and the snippet unfolds.
 
 ### Current Snippets
 
-- stc -> Generate a basic stencil component.
-- stp -> Add a new Prop() to the component.
-- sts -> Add a new State() to the component.
+- stc  -> Generate a basic stencil component.
+- sts  -> Add a new @State().
+- stp  -> Add a new @Prop().
+- stw  -> Add a new @PropWillChange().
+- std  -> Add a new @PropDidChange().
+- stev -> Add a new @Event().
+- stel -> Add a new @Element().
+- stm  -> Add a new @Method().
 
 ## Releases
 
@@ -30,3 +35,8 @@ Initial release
 ### 1.0.1
 
 Update snippets info
+
+### 1.1.0
+
+Added more snippets
+Updated snippets info

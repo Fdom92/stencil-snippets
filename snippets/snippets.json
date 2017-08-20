@@ -6,10 +6,10 @@
             "",
             "",
             "@Component({",
-            "\ttag: 'my-component',",
-            "\tstyleUrl: 'my-component.scss'",
+            "\ttag: '${1:stencil-component}',",
+            "\tstyleUrl: '${1:stencil-component}.scss'",
             "})",
-            "export class MyComponent {",
+            "export class ${2:StencilComponent} {",
             "",
             "\trender() {",
             "\t\treturn (",
@@ -23,15 +23,59 @@
     "Stencil State": {
         "prefix": "sts",
         "body": [
-            "@State() newState: any;"
+            "@State() ${1:newState}: any;"
         ],
-        "description": "Add a new State"
+        "description": "Add a new State decorator to manage internal state. Decorating a class member with State will trigger efficient re-renders when the value is set, but it won't be accessible through the Element."
     },
     "Stencil Prop": {
         "prefix": "stp",
         "body": [
-            "@Prop() newProp: any;"
+            "@Prop() ${1:newProp}: any;"
         ],
-        "description": "Add a new Prop"
+        "description": "Add a new Prop decorator. Components need to explicitly declare the Props it expects to receive using the Prop decorator. Props can be a number, string, boolean, or even an Object. By default, when a member decorated with Prop decorator is set, the component will efficiently re-render."
+    },
+    "Stencil Prop Will Change": {
+        "prefix": "stw",
+        "body": [
+            "@PropWillChange('${1:myProp}')",
+            "willChangeHandler(newValue) {",
+            "\tconsole.log('The new value of ${1:myProp} is: ', newValue);",
+            "}"
+        ],
+        "description": "Add a new will change decorator to make the function be invoked immediately before a member decorated with Prop is changed."
+    },
+    "Stencil Prop Did Change": {
+        "prefix": "std",
+        "body": [
+            "@PropDidChange('${1:myProp}')",
+            "didChangeHandler(newValue) {",
+            "\t// do something now that ${1:myProp} has changed",
+            "}"
+        ],
+        "description": "Add a new did change decorator to make the function be invoked immediately after a member decorated with Prop is changed."
+    },
+    "Stencil Event": {
+        "prefix": "stev",
+        "body": [
+            "@Event() ${1:newCustomEvent}: EventEmitter;"
+        ],
+        "description": "Add a new Event emitter to dispatch Custom DOM events up for other components to handle."
+    },
+    "Stencil Element": {
+        "prefix": "stel",
+        "body": [
+            "@Element ${1:element}: HTMLElement;"
+        ],
+        "description": "Add a new Element decorator to get access to the host element within the class instance."
+    },
+    "Stencil Method": {
+        "prefix": "stm",
+        "body": [
+            "@Method()",
+            "${1:publicMethod}() {",
+            "",
+            "}"
+        ],
+        "description": "Add a Method decorator to expose the function on the public API. Functions decorated with the @Method() decorator can be called directly from the element."
     }
 }
