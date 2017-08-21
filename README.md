@@ -17,26 +17,21 @@ Type part of a snippet, press enter, and the snippet unfolds.
 
 ### Current Snippets
 
-- stc  -> Generate a basic stencil component.
-- sts  -> Add a new @State().
-- stp  -> Add a new @Prop().
-- stw  -> Add a new @PropWillChange().
-- std  -> Add a new @PropDidChange().
-- stev -> Add a new @Event().
-- stel -> Add a new @Element().
-- stm  -> Add a new @Method().
+```
+stc  // Generate a basic stencil component.
+sts  // Add a new @State().
+stp  // Add a new @Prop().
+stw  // Add a new @PropWillChange().
+std  // Add a new @PropDidChange().
+stev // Add a new @Event().
+stel // Add a new @Element().
+stm  // Add a new @Method().
+````
 
-## Releases
+## License
 
-### 1.0.0
+[MIT License](https://github.com/Fdom92/stencil-snippets/blob/master/LICENSE)
 
-Initial release
+## Source
 
-### 1.0.1
-
-Update snippets info
-
-### 1.1.0
-
-Added more snippets
-Updated snippets info
+[Github](https://github.com/Fdom92/stencil-snippets)

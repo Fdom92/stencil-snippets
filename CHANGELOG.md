@@ -12,3 +12,8 @@ Update snippets info
 
 Added more snippets
 Updated snippets info
+
+## 1.2.0
+
+Added stencil logo
+Updated README
