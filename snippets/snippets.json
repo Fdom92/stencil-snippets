@@ -61,6 +61,16 @@
         ],
         "description": "Add a new Event emitter to dispatch Custom DOM events up for other components to handle."
     },
+    "Stencil Listen": {
+        "prefix": "stl",
+        "body": [
+            "@Listen('${1:myCustomEvent}:')",
+            "customEventHandler(event) {",
+            "\tconsole.log('Received the custom event: ', event);",
+            "}"
+        ],
+        "description": "Add a new Listen decorator. The Listen decorator is for listening and responding to DOM events from a child."
+    },
     "Stencil Element": {
         "prefix": "stel",
         "body": [
