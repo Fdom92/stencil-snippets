@@ -18,14 +18,15 @@ Type part of a snippet, press enter, and the snippet unfolds.
 ### Current Snippets
 
 ```
-stc  // Generate a basic stencil component.
-sts  // Add a new @State().
-stp  // Add a new @Prop().
-stw  // Add a new @PropWillChange().
-std  // Add a new @PropDidChange().
-stev // Add a new @Event().
-stel // Add a new @Element().
-stm  // Add a new @Method().
+st-component  // Generate a basic stencil component.
+st-prop       // Add a new @Prop().
+st-willchange // Add a new @PropWillChange().
+st-didchange  // Add a new @PropDidChange().
+st-state      // Add a new @State().
+st-method     // Add a new @Method().
+st-element    // Add a new @Element().
+st-event      // Add a new @Event().
+st-listen     // Add a new @Listen().
 ```
 
 ## License

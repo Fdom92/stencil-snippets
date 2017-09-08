@@ -1,6 +1,6 @@
 {
     "Stencil Component": {
-        "prefix": "stc",
+        "prefix": "st-component",
         "body": [
             "import { Component } from '@stencil/core';",
             "",
@@ -20,22 +20,15 @@
         ],
         "description": "Generate a new Stencil component"
     },
-    "Stencil State": {
-        "prefix": "sts",
-        "body": [
-            "@State() ${1:newState}: any;"
-        ],
-        "description": "Add a new State decorator to manage internal state. Decorating a class member with State will trigger efficient re-renders when the value is set, but it won't be accessible through the Element."
-    },
     "Stencil Prop": {
-        "prefix": "stp",
+        "prefix": "st-prop",
         "body": [
             "@Prop() ${1:newProp}: any;"
         ],
         "description": "Add a new Prop decorator. Components need to explicitly declare the Props it expects to receive using the Prop decorator. Props can be a number, string, boolean, or even an Object. By default, when a member decorated with Prop decorator is set, the component will efficiently re-render."
     },
     "Stencil Prop Will Change": {
-        "prefix": "stw",
+        "prefix": "st-willchange",
         "body": [
             "@PropWillChange('${1:myProp}')",
             "willChangeHandler(newValue) {",
@@ -45,7 +38,7 @@
         "description": "Add a new will change decorator to make the function be invoked immediately before a member decorated with Prop is changed."
     },
     "Stencil Prop Did Change": {
-        "prefix": "std",
+        "prefix": "st-didchange",
         "body": [
             "@PropDidChange('${1:myProp}')",
             "didChangeHandler(newValue) {",
@@ -54,32 +47,15 @@
         ],
         "description": "Add a new did change decorator to make the function be invoked immediately after a member decorated with Prop is changed."
     },
-    "Stencil Event": {
-        "prefix": "stev",
+    "Stencil State": {
+        "prefix": "st-state",
         "body": [
-            "@Event() ${1:newCustomEvent}: EventEmitter;"
+            "@State() ${1:newState}: any;"
         ],
-        "description": "Add a new Event emitter to dispatch Custom DOM events up for other components to handle."
-    },
-    "Stencil Listen": {
-        "prefix": "stl",
-        "body": [
-            "@Listen('${1:myCustomEvent}:')",
-            "customEventHandler(event) {",
-            "\tconsole.log('Received the custom event: ', event);",
-            "}"
-        ],
-        "description": "Add a new Listen decorator. The Listen decorator is for listening and responding to DOM events from a child."
-    },
-    "Stencil Element": {
-        "prefix": "stel",
-        "body": [
-            "@Element ${1:element}: HTMLElement;"
-        ],
-        "description": "Add a new Element decorator to get access to the host element within the class instance."
+        "description": "Add a new State decorator to manage internal state. Decorating a class member with State will trigger efficient re-renders when the value is set, but it won't be accessible through the Element."
     },
     "Stencil Method": {
-        "prefix": "stm",
+        "prefix": "st-method",
         "body": [
             "@Method()",
             "${1:publicMethod}() {",
@@ -87,5 +63,29 @@
             "}"
         ],
         "description": "Add a Method decorator to expose the function on the public API. Functions decorated with the @Method() decorator can be called directly from the element."
+    },
+    "Stencil Element": {
+        "prefix": "st-element",
+        "body": [
+            "@Element ${1:element}: HTMLElement;"
+        ],
+        "description": "Add a new Element decorator to get access to the host element within the class instance."
+    },
+    "Stencil Event": {
+        "prefix": "st-event",
+        "body": [
+            "@Event() ${1:newCustomEvent}: EventEmitter;"
+        ],
+        "description": "Add a new Event emitter to dispatch Custom DOM events up for other components to handle."
+    },
+    "Stencil Listen": {
+        "prefix": "st-listen",
+        "body": [
+            "@Listen('${1:myCustomEvent}:')",
+            "customEventHandler(event) {",
+            "\tconsole.log('Received the custom event: ', event);",
+            "}"
+        ],
+        "description": "Add a new Listen decorator. The Listen decorator is for listening and responding to DOM events from a child."
     }
 }

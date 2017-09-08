@@ -17,3 +17,9 @@ Updated snippets info
 
 Added stencil logo
 Updated README
+
+## 2.0.0
+
+Changed snippets prefix
+Added Listener snippet
+Updated README
