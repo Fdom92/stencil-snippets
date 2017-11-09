@@ -23,3 +23,9 @@ Updated README
 Changed snippets prefix
 Added Listener snippet
 Updated README
+
+## 2.1.0
+
+Fixed Element snippet
+Added component lifecycle snippets
+Updated README

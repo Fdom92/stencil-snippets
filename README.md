@@ -27,6 +27,12 @@ st-method     // Add a new @Method().
 st-element    // Add a new @Element().
 st-event      // Add a new @Event().
 st-listen     // Add a new @Listen().
+
+st-willload   // Add the componentWillLoad life cycle.
+st-didload    // Add the componentDidLoad life cycle.
+st-willupdate // Add the componentWillUpdate life cycle.
+st-didupdate  // Add the componentDidUpdate life cycle.
+st-didunload  // Add the componentDidUnload life cycle.
 ```
 
 ## License

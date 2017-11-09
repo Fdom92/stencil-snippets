@@ -67,7 +67,7 @@
     "Stencil Element": {
         "prefix": "st-element",
         "body": [
-            "@Element ${1:element}: HTMLElement;"
+            "@Element() ${1:element}: HTMLElement;"
         ],
         "description": "Add a new Element decorator to get access to the host element within the class instance."
     },
@@ -87,5 +87,50 @@
             "}"
         ],
         "description": "Add a new Listen decorator. The Listen decorator is for listening and responding to DOM events from a child."
+    },
+    "Stencil Component Will Load Life Cycle": {
+        "prefix": "st-willload",
+        "body": [
+            "componentWillLoad() {",
+            "\tconsole.log('The component is about to be rendered');",
+            "}"
+        ],
+        "description": "Add the method for Component Will Load Life Cycle. The component will load but has not rendered yet, this is a good place to make any last minute updates before rendering."
+    },
+    "Stencil Component Did Load Life Cycle": {
+        "prefix": "st-didload",
+        "body": [
+            "componentDidLoad() {",
+            "\tconsole.log('The component has been rendered');",
+            "}"
+        ],
+        "description": "Add the method for Component Did Load Life Cycle. The component is loaded and has rendered, updating data in this event may cause the component to re-render."
+    },
+    "Stencil Component Will Update Life Cycle": {
+        "prefix": "st-willupdate",
+        "body": [
+            "componentWillUpdate() {",
+            "\tconsole.log('The component will update');",
+            "}"
+        ],
+        "description": "Add the method for Component Will Update Life Cycle. The component will update and re-render, called multiple times throughout the life of the component as it updates."
+    },
+    "Stencil Component Did Update Life Cycle": {
+        "prefix": "st-didupdate",
+        "body": [
+            "componentDidUpdate() {",
+            "\tconsole.log('The component did update');",
+            "}"
+        ],
+        "description": "Add the method for Component Did Update Life Cycle. The component finished updating, called after componentWillUpdate"
+    },
+    "Stencil Component Did Unload Life Cycle": {
+        "prefix": "st-didunload",
+        "body": [
+            "componentDidUnload() {",
+            "\tconsole.log('The view has been removed from the DOM');",
+            "}"
+        ],
+        "description": "Add the method for Component Did Unload Life Cycle. he component did unload and the element will be destroyed."
     }
 }
