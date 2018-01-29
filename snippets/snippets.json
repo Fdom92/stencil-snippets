@@ -27,25 +27,15 @@
         ],
         "description": "Add a new Prop decorator. Components need to explicitly declare the Props it expects to receive using the Prop decorator. Props can be a number, string, boolean, or even an Object. By default, when a member decorated with Prop decorator is set, the component will efficiently re-render."
     },
-    "Stencil Prop Will Change": {
-        "prefix": "st-willchange",
+    "Stencil Watch": {
+        "prefix": "st-watch",
         "body": [
-            "@PropWillChange('${1:myProp}')",
-            "willChangeHandler(newValue) {",
-            "\tconsole.log('The new value of ${1:myProp} is: ', newValue);",
+            "@Watch('${1:myProp}')",
+            "watchHandler(newValue) {",
+            "\tconsole.log('The value of ${1:myProp} is: ', newValue);",
             "}"
         ],
-        "description": "Add a new will change decorator to make the function be invoked immediately before a member decorated with Prop is changed."
-    },
-    "Stencil Prop Did Change": {
-        "prefix": "st-didchange",
-        "body": [
-            "@PropDidChange('${1:myProp}')",
-            "didChangeHandler(newValue) {",
-            "\t// do something now that ${1:myProp} has changed",
-            "}"
-        ],
-        "description": "Add a new did change decorator to make the function be invoked immediately after a member decorated with Prop is changed."
+        "description": "Add a new watch decorator to make the function be invoked immediately before and after a member decorated with Prop is changed."
     },
     "Stencil State": {
         "prefix": "st-state",
