@@ -20,8 +20,7 @@ Type part of a snippet, press enter, and the snippet unfolds.
 ```
 st-component  // Generate a basic stencil component.
 st-prop       // Add a new @Prop().
-st-willchange // Add a new @PropWillChange().
-st-didchange  // Add a new @PropDidChange().
+st-watch      // Add a new @Watch().
 st-state      // Add a new @State().
 st-method     // Add a new @Method().
 st-element    // Add a new @Element().

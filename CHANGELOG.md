@@ -29,3 +29,9 @@ Updated README
 Fixed Element snippet
 Added component lifecycle snippets
 Updated README
+
+## 2.1.1
+
+Removed deprecated PropWillChange and PropDidChange snippets
+Added Watch snippet
+Updated README
