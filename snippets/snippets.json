@@ -31,7 +31,7 @@
         "prefix": "st-watch",
         "body": [
             "@Watch('${1:myProp}')",
-            "watchHandler(newValue) {",
+            "${2:watchHandler}(newValue) {",
             "\tconsole.log('The value of ${1:myProp} is: ', newValue);",
             "}"
         ],
