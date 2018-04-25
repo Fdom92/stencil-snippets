@@ -7,7 +7,7 @@
             "",
             "@Component({",
             "\ttag: '${1:stencil-component}',",
-            "\tstyleUrl: '${1:stencil-component}.scss'",
+            "\tstyleUrl: '${1:stencil-component}.css'",
             "})",
             "export class ${2:StencilComponent} {",
             "",

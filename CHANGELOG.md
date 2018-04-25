@@ -35,3 +35,7 @@ Updated README
 Removed deprecated PropWillChange and PropDidChange snippets
 Added Watch snippet
 Updated README
+
+## 2.1.2
+
+Fixed the styleUrl to use css instead of sass
