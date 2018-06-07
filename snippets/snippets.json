@@ -23,7 +23,7 @@
     "Stencil Prop": {
         "prefix": "st-prop",
         "body": [
-            "@Prop() ${1:newProp}: any;"
+            "@Prop() ${1:newProp}: ${2|any,string,boolean,number|};"
         ],
         "description": "Add a new Prop decorator. Components need to explicitly declare the Props it expects to receive using the Prop decorator. Props can be a number, string, boolean, or even an Object. By default, when a member decorated with Prop decorator is set, the component will efficiently re-render."
     },
@@ -40,7 +40,7 @@
     "Stencil State": {
         "prefix": "st-state",
         "body": [
-            "@State() ${1:newState}: any;"
+            "@State() ${1:newState}: ${2|any,string,boolean,number|};"
         ],
         "description": "Add a new State decorator to manage internal state. Decorating a class member with State will trigger efficient re-renders when the value is set, but it won't be accessible through the Element."
     },
