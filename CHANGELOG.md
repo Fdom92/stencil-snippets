@@ -34,8 +34,12 @@ Updated README
 
 Removed deprecated PropWillChange and PropDidChange snippets
 Added Watch snippet
-Updated README
+Updated README (PR [#1](https://github.com/Fdom92/stencil-snippets/pull/1))
 
 ## 2.1.2
 
-Fixed the styleUrl to use css instead of sass
+Fixed the styleUrl to use css instead of sass ([#3](https://github.com/Fdom92/stencil-snippets/issues/3))
+
+## 2.1.3
+
+Added a few extra tabstops to the snippets to make them a bit more intuitive (PR [#4](https://github.com/Fdom92/stencil-snippets/pull/4))
