@@ -2,7 +2,7 @@
     "Stencil Component": {
         "prefix": "st-component",
         "body": [
-            "import { Component } from '@stencil/core';",
+            "import { Component, h } from '@stencil/core';",
             "",
             "",
             "@Component({",
