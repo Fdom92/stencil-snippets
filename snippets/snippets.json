@@ -18,31 +18,38 @@
             "\t}",
             "}"
         ],
-        "description": "Generate a new Stencil component"
+        "description": "Generate a new web component"
     },
     "Stencil Prop": {
         "prefix": "st-prop",
         "body": [
             "@Prop() ${1:newProp}: ${2|any,string,boolean,number|};"
         ],
-        "description": "Add a new Prop decorator. Components need to explicitly declare the Props it expects to receive using the Prop decorator. Props can be a number, string, boolean, or even an Object. By default, when a member decorated with Prop decorator is set, the component will efficiently re-render."
-    },
-    "Stencil Watch": {
-        "prefix": "st-watch",
-        "body": [
-            "@Watch('${1:myProp}')",
-            "${2:watchHandler}(newValue) {",
-            "\t${0:console.log('The value of ${1:myProp} is: ', newValue);}",
-            "}"
-        ],
-        "description": "Add a new watch decorator to make the function be invoked immediately before and after a member decorated with Prop is changed."
+        "description": "Declares an exposed property/attribute"
     },
     "Stencil State": {
         "prefix": "st-state",
         "body": [
             "@State() ${1:newState}: ${2|any,string,boolean,number|};"
         ],
-        "description": "Add a new State decorator to manage internal state. Decorating a class member with State will trigger efficient re-renders when the value is set, but it won't be accessible through the Element."
+        "description": "Declares an internal state of the component"
+    },
+    "Stencil Watch": {
+        "prefix": "st-watch",
+        "body": [
+            "@Watch('${1:myProp}')",
+            "${2:watchHandler}(newValue, oldValue) {",
+            "\t${0:console.log('The value of ${1:myProp} is: ', newValue);}",
+            "}"
+        ],
+        "description": "Declares a hook that runs when a property or state changes"
+    },
+    "Stencil Element": {
+        "prefix": "st-element",
+        "body": [
+            "@Element() ${1:element}: HTMLElement;"
+        ],
+        "description": "Declares a reference to the host element"
     },
     "Stencil Method": {
         "prefix": "st-method",
@@ -52,21 +59,14 @@
             "\t$0",
             "}"
         ],
-        "description": "Add a Method decorator to expose the function on the public API. Functions decorated with the @Method() decorator can be called directly from the element."
-    },
-    "Stencil Element": {
-        "prefix": "st-element",
-        "body": [
-            "@Element() ${1:element}: HTMLElement;"
-        ],
-        "description": "Add a new Element decorator to get access to the host element within the class instance."
+        "description": "Declares an exposed public method"
     },
     "Stencil Event": {
         "prefix": "st-event",
         "body": [
             "@Event() ${1:newCustomEvent}: EventEmitter;"
         ],
-        "description": "Add a new Event emitter to dispatch Custom DOM events up for other components to handle."
+        "description": "Declares a DOM event the component might emit"
     },
     "Stencil Listen": {
         "prefix": "st-listen",
@@ -76,51 +76,78 @@
             "\t${0:console.log('Received the custom event: ', event);}",
             "}"
         ],
-        "description": "Add a new Listen decorator. The Listen decorator is for listening and responding to DOM events from a child."
+        "description": "Listens for DOM events"
+    },
+    "Stencil Component Connected Callback Life Cycle": {
+        "prefix": "st-connected",
+        "body": [
+            "connectedCallback() {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Called every time the component is connected to the DOM. When the component is first connected, this method is called before componentWillLoad. It's important to note that this method can be called more than once, everytime, the element is attached or moved in the DOM."
+    },
+    "Stencil Component Disonnected Callback Life Cycle": {
+        "prefix": "st-disconnected",
+        "body": [
+            "disconnectedCallback() {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Called every time the component is disconnected from the DOM, ie, it call be dispatched more than once, DO not confuse with a 'onDestroy' kind of event."
     },
     "Stencil Component Will Load Life Cycle": {
         "prefix": "st-willload",
         "body": [
             "componentWillLoad() {",
-            "\t${0:console.log('The component is about to be rendered');}",
+            "\t$0",
             "}"
         ],
-        "description": "Add the method for Component Will Load Life Cycle. The component will load but has not rendered yet, this is a good place to make any last minute updates before rendering."
+        "description": "Called once just after the component is first connected to the DOM. A promise can be returned, that can be used to wait for the first render."
     },
     "Stencil Component Did Load Life Cycle": {
         "prefix": "st-didload",
         "body": [
             "componentDidLoad() {",
-            "\t${0:console.log('The component has been rendered');}",
+            "\t$0",
             "}"
         ],
-        "description": "Add the method for Component Did Load Life Cycle. The component is loaded and has rendered, updating data in this event may cause the component to re-render."
+        "description": "Called once just after the component fully loaded and the first render() occurs."
+    },
+    "Stencil Component Will Render Life Cycle": {
+        "prefix": "st-willrender",
+        "body": [
+            "componentWillRender() {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Called before every render(). A promise can be returned, that can be used to wait for the upcoming render."
+    },
+    "Stencil Component Did Render Life Cycle": {
+        "prefix": "st-didrender",
+        "body": [
+            "componentDidRender() {",
+            "\t$0",
+            "}"
+        ],
+        "description": "Called once just after the component fully loaded and the first render() occurs."
     },
     "Stencil Component Will Update Life Cycle": {
         "prefix": "st-willupdate",
         "body": [
             "componentWillUpdate() {",
-            "\t${0:console.log('The component will update');}",
+            "\t$0",
             "}"
         ],
-        "description": "Add the method for Component Will Update Life Cycle. The component will update and re-render, called multiple times throughout the life of the component as it updates."
+        "description": "Called when the component is about to be updated because some Prop() or State() changed. It's never called during the first render(). A promise can be returned, that can be used to wait for the next render."
     },
     "Stencil Component Did Update Life Cycle": {
         "prefix": "st-didupdate",
         "body": [
             "componentDidUpdate() {",
-            "\t${0:console.log('The component did update');}",
+            "\t$0",
             "}"
         ],
-        "description": "Add the method for Component Did Update Life Cycle. The component finished updating, called after componentWillUpdate"
-    },
-    "Stencil Component Did Unload Life Cycle": {
-        "prefix": "st-didunload",
-        "body": [
-            "componentDidUnload() {",
-            "\t${0:console.log('The view has been removed from the DOM');}",
-            "}"
-        ],
-        "description": "Add the method for Component Did Unload Life Cycle. he component did unload and the element will be destroyed."
+        "description": "Called just after the component updates. It's never called during the first render()."
     }
 }

@@ -18,20 +18,23 @@ Type part of a snippet, press enter, and the snippet unfolds.
 ### Current Snippets
 
 ```
-st-component  // Generate a basic stencil component.
-st-prop       // Add a new @Prop().
-st-watch      // Add a new @Watch().
-st-state      // Add a new @State().
-st-method     // Add a new @Method().
-st-element    // Add a new @Element().
-st-event      // Add a new @Event().
-st-listen     // Add a new @Listen().
+st-component  // Generate a new web component
+st-prop       // Declares an exposed property/attribute
+st-state      // Declares an internal state of the component
+st-watch      // Declares a hook that runs when a property or state changes
+st-element    // Declares a reference to the host element
+st-method     // Declares an exposed public method
+st-event      // Declares a DOM event the component might emit
+st-listen     // Listens for DOM events
 
-st-willload   // Add the componentWillLoad life cycle.
-st-didload    // Add the componentDidLoad life cycle.
-st-willupdate // Add the componentWillUpdate life cycle.
-st-didupdate  // Add the componentDidUpdate life cycle.
-st-didunload  // Add the componentDidUnload life cycle.
+st-connected     // Add the connectedCallback life cycle.
+st-disconnected  // Add the disconnectedCallback life cycle.
+st-willload      // Add the componentWillLoad life cycle.
+st-didload       // Add the componentDidLoad life cycle.
+st-willrender    // Add the componentWillRender life cycle.
+st-didrender     // Add the componentDidRender life cycle.
+st-willupdate    // Add the componentWillUpdate life cycle.
+st-didupdate     // Add the componentDidUpdate life cycle.
 ```
 
 ## License
