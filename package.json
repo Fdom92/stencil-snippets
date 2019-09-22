@@ -1,6 +1,6 @@
 {
     "name": "stencil-snippets",
-    "publisher": "fdom92",
+    "publisher": "Fdom-92",
     "displayName": "stencil-snippets",
     "description": "Stencils snippets for VS Code",
     "icon": "images/stenciljs.jpg",
@@ -8,7 +8,7 @@
         "type": "git",
         "url": "https://github.com/Fdom92/stencil-snippets.git"
     },
-    "version": "2.2.0",
+    "version": "3.0.0",
     "engines": {
         "vscode": "^1.15.0"
     },
